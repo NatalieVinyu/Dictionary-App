@@ -30,6 +30,8 @@ h1 {
     img {
         width: 50%;
         height: auto;
+        padding-top: 25%;
+
     }
     .submitButton {
         display: none;
@@ -43,6 +45,8 @@ h1 {
     img {
         width: 75%;
         height: auto;
+        padding-top: 35%;
+
     }
     .container {
         display: block;
