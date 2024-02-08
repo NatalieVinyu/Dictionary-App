@@ -12,23 +12,29 @@ function mySearch() {
 }
 */
 
-let url = "https://api.dictionaryapi.dev/api/v2/entries/en/hello"
+let url = "https://api.dictionaryapi.dev/api/v2/entries/en/cake"
 axios.get(url).then(showWord);
 
 function showWord(response) {
     let h2 = document.querySelector("h2")
-    let word = response.data[0].word
+    let word = response.data[0].word.toUpperCase()
     h2.innerHTML = `${word}`
+
+    let p = document.querySelector("#phonetic")
+    let phonetic = response.data[0].phonetic
+    let partOfSpeech = response.data[0].meanings[0].partOfSpeech
+    p.innerHTML = `${partOfSpeech}  ${phonetic}`
+    
 
     let h3 = document.querySelector("h3")
     let definition = response.data[0].meanings[0].definitions[0].definition
     h3.innerHTML = `${definition}`
 
-    let audio = document.querySelector("audio")
+    /*let audio = document.querySelector("audio")
     let phonetics = response.data[0].phonetics[0].audio
-    audio.innerHTML = `${phonetics}`
+    audio.innerHTML = `${phonetics}`*/
 
-    console.log(response.data[0].phonetics[0])
+    console.log(response.data[0])
 }
 
 

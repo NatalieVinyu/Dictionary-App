@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -15,16 +17,30 @@ img {
 }
 
 h1 {
+    font-family: 'Single Day', cursive;
     font-size: 75px;
     text-align: center;
 }
 
+h2, h3 {
+    font-family: 'Single Day', cursive;
+}
+
 h2 {
     font-size: 50px;
+    color: rgb(105,105,105);
 }
 
 h3 {
     font-size: 25px;
+    color: rgb(64,64,64);
+    border-left: 3px solid #D0EDF5;
+    padding-left: 15px;
+}
+
+#phonetic {
+    color: rgb(128,128,128);
+    padding-bottom: 15px;
 }
 
 .container {
@@ -36,16 +52,25 @@ h3 {
     margin: auto;
 }
 
+.definitions {
+    display: block;
+    margin: 50px;
+}
+
 .search {
+    font-family: 'Single Day', cursive;
+    outline: none;
     border: none;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid #D0EDF5;
     padding: 5px;
     font-size: 25px;
     font-weight: lighter;
-    cursor: pointer;
+    cursor: auto;
 }
 
 .submitButton {
+    font-family: 'Single Day', cursive;
+    color: (64,64,64);
     cursor: pointer;
     background-color: #D0EDF5;
     border: none;
