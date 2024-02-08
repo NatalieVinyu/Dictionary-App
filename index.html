@@ -4,15 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dictionary App</title>
+    <link rel="stylesheet" href="src/styles.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
+
+    <div class="container">
+        <h1>Dictionary App</h1>
+
+        <div class="searchBar">
+            <form id="searchBar">
+            <input type="text" class="search" id="searchWord" placeholder="Search a word..." autocomplete="off" autofocus="on" >
+            <input type="submit" class="submitButton" value="Search" >
+            </form>
+        </div>
+
+        <h2 id="word"></h2>
+        <h3 id="definition"></h3>
+        
+        <audio controls autoplay muted>
+            <source type="audio/mpeg">
+        </audio>
+    </div>
+
     
-    <h1>Dictionary App</h1>
-
-    <h2></h2>
-
-    <h3></h3>
 
     <script src="src/script.js"></script>
 </body>
