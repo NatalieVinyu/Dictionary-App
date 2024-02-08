@@ -37,11 +37,11 @@ function showWord(response) {
     let verbDefinition = response.data[0].meanings[1].definitions[0].definition
     inputVerbDefinition.innerHTML = `${verbDefinition}`
 
-    let inputVerbExample = document.querySelector("#verbExample")
+    /*let inputVerbExample = document.querySelector("#verbExample")
     let verbExample = response.data[0].meanings[1].definitions[0].example
     inputVerbExample.innerHTML = `Example: "${verbExample}"`
 
-    /*let audio = document.querySelector("audio")
+    let audio = document.querySelector("audio")
     let phonetics = response.data[0].phonetics[0].audio
     audio.innerHTML = `${phonetics}`*/
 
