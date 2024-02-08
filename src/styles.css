@@ -22,6 +22,16 @@ h1 {
     text-align: center;
 }
 
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 55px;
+    } 
+
+    .submitButton {
+        display: none;
+    }
+}
+
 h2, h3 {
     font-family: 'Single Day', cursive;
 }
@@ -36,12 +46,23 @@ h3 {
     color: rgb(64,64,64);
     border-left: 3px solid #D0EDF5;
     padding-left: 15px;
+    margin-bottom: 20px;
+    
 }
 
-#phonetic {
+p {
     color: rgb(128,128,128);
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
+
+/*#more {
+    display: none;
+}
+
+#myBtn {
+    cursor: pointer;
+    color: rgb(64,64,64);
+}*/
 
 .container {
     display: block;
@@ -70,7 +91,7 @@ h3 {
 
 .submitButton {
     font-family: 'Single Day', cursive;
-    color: (64,64,64);
+    color: rgb(64,64,64);
     cursor: pointer;
     background-color: #D0EDF5;
     border: none;
@@ -78,6 +99,10 @@ h3 {
     padding: 10px;
     margin-left: 25px;
     font-size: 25px;
+}
+
+.submitButton:hover {
+    background-color: #9DD9F3;
 }
 
 

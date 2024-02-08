@@ -10,25 +10,36 @@ function mySearch() {
 
    
 }
+
+let url = "https://api.dictionaryapi.dev/api/v2/entries/en/bottle"
+axios.get(url).then(showWord);
 */
 
-let url = "https://api.dictionaryapi.dev/api/v2/entries/en/cake"
-axios.get(url).then(showWord);
-
 function showWord(response) {
-    let h2 = document.querySelector("h2")
-    let word = response.data[0].word.toUpperCase()
-    h2.innerHTML = `${word}`
+    let inputWord = document.querySelector("#word")
+    let word = response.data[0].word
+    inputWord.innerHTML = `${word}`
 
-    let p = document.querySelector("#phonetic")
+    let inputPhonetic = document.querySelector("#phonetic")
     let phonetic = response.data[0].phonetic
     let partOfSpeech = response.data[0].meanings[0].partOfSpeech
-    p.innerHTML = `${partOfSpeech}  ${phonetic}`
+    inputPhonetic.innerHTML = `${partOfSpeech}  ${phonetic}`
     
-
-    let h3 = document.querySelector("h3")
+    let inputDefinition = document.querySelector("#definition")
     let definition = response.data[0].meanings[0].definitions[0].definition
-    h3.innerHTML = `${definition}`
+    inputDefinition.innerHTML = `${definition}`
+
+    let inputVerb = document.querySelector("#verb")
+    let verb = response.data[0].meanings[1].partOfSpeech
+    inputVerb.innerHTML = `${verb}`
+
+    let inputVerbDefinition = document.querySelector("#verbDefinition")
+    let verbDefinition = response.data[0].meanings[1].definitions[0].definition
+    inputVerbDefinition.innerHTML = `${verbDefinition}`
+
+    let inputVerbExample = document.querySelector("#verbExample")
+    let verbExample = response.data[0].meanings[1].definitions[0].example
+    inputVerbExample.innerHTML = `Example: "${verbExample}"`
 
     /*let audio = document.querySelector("audio")
     let phonetics = response.data[0].phonetics[0].audio
@@ -37,9 +48,7 @@ function showWord(response) {
     console.log(response.data[0])
 }
 
-
-
-/*function submitButton(event) {
+function submitButton(event) {
     event.preventDefault()
     let word = document.querySelector("#searchWord")
 
@@ -52,7 +61,23 @@ function showWord(response) {
 }
 
 let wordForm = document.querySelector("#searchBar")
-wordForm.addEventListener("submit", submitButton)*/
+wordForm.addEventListener("submit", submitButton)
+
+/*function myFunction() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less"; 
+      moreText.style.display = "inline";
+    }
+  }*/
 
 
 
