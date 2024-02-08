@@ -129,9 +129,15 @@ p {
     background-color: #9DD9F3;
 }
 
-
 .searchBar {
     display: flex;
     justify-content: center;
     margin: 20px;
+}
+
+footer {
+    font-family: 'Single Day', cursive;
+    font-size: 25px;
+    padding: 50px;
+    text-align: center;
 }
