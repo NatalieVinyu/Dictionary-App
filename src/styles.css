@@ -43,10 +43,10 @@ h1 {
     } 
     img {
         width: 75%;
-        padding-top: 35%;
+        padding-top: 15%;
     }
-    .container {
-        display: block;
+    div.container {
+        width: 75%;
     }
     input.search {
         font-size: 20px;
